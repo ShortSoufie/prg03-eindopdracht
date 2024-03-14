@@ -4,14 +4,64 @@
 }
 
 body {
-    background-color: #c9c9ff;
+    background-color: #082140;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    background-color: #60609f;
+    background-color: #215277;
     padding: 20px;
-    border-bottom: solid #ffd31f 5px;
-    color: #ffe771;
+    border-bottom: solid #040918 5px;
+    color: #61daaf;
+    margin-bottom: 20px;
+}
+
+#league-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2vw;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.champion-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+    border: 3px solid #269c7d;
+    border-radius: 5px;
+    background-color: #3f5873;
+    padding: 20px;
+    color: #61daaf;
+}
+
+.champion-image {
+    height: 350px;
+    border: 2px solid #269c7d;
+    border-radius: 5px;
+}
+
+.champion-button {
+    display: block;
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #61daaf;
+    color: #000000;
+    font-size: 15px;
+    transition: ease-out 0.2s;
+}
+
+.champion-button:hover {
+    background-color: #b0ffe3;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+
 }
