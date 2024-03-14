@@ -8,26 +8,62 @@ function getLeagueChamps()
         [
             "id" => 1,
             "name" => "Zoe",
+            "img" => "img/zoe.jpg"
         ],
         [
             "id" => 2,
             "name" => "Aphelios",
+            "img" => "img/aphelios.jpg"
         ],
         [
             "id" => 3,
             "name" => "Hwei",
+            "img" => "img/hwei.jpg"
         ],
         [
             "id" => 4,
             "name" => "Viego",
+            "img" => "img/viego.jpg"
         ],
         [
             "id" => 5,
             "name" => "Jhin",
+            "img" => "img/jhin.jpg"
         ],
         [
             "id" => 6,
             "name" => "Riven",
+            "img" => "img/riven.jpg"
+        ],
+        [
+            "id" => 7,
+            "name" => "Seraphine",
+            "img" => "img/seraphine.jpg"
+        ],
+        [
+            "id" => 8,
+            "name" => "Yone",
+            "img" => "img/yone.jpg"
+        ],
+        [
+            "id" => 9,
+            "name" => "Samira",
+            "img" => "img/samira.jpg"
+        ],
+        [
+            "id" => 10,
+            "name" => "Lillia",
+            "img" => "img/lillia.jpg"
+        ],
+        [
+            "id" => 11,
+            "name" => "Sett",
+            "img" => "img/sett.jpg"
+        ],
+        [
+            "id" => 12,
+            "name" => "Fiora",
+            "img" => "img/fiora.jpg"
         ]
     ];
 }
@@ -62,8 +98,33 @@ function getChampDetails($id)
         6 => [
             "description" => "Riven is a fierce and determined warrior seeking redemption for her past sins. She wields a massive sword and uses powerful techniques to outmaneuver her foes.",
             "tags" => ['Toplane', 'Fighter', 'Female']
+        ],
+        7 => [
+            "description" => "Seraphine is a popstar from Piltover, using her music to connect with people and spread joy. She harnesses the power of her voice and magical abilities to enchant and inspire her audience.",
+            "tags" => ['Botlane', 'Support', 'Female']
+        ],
+        8 => [
+            "description" => "Yone is a former student of the legendary swordsman Yasuo, who fell to darkness but later redeemed himself. He wields dual swords with deadly precision, seeking to atone for his past.",
+            "tags" => ['Toplane', 'Assassin', 'Male']
+        ],
+        9 => [
+            "description" => "Samira is a daring and relentless warrior, known for her unmatched skill with a blade and her love of danger. She thrives in chaotic battles, chaining together stylish combos to outplay her opponents.",
+            "tags" => ['Botlane', 'Marksman', 'Female']
+        ],
+        10 => [
+            "description" => "Lillia is a mystical creature who roams through forests, spreading dreams and inspiring wonder. She uses her magical abilities to control the battlefield, lulling her enemies into a deep sleep before delivering a devastating blow.",
+            "tags" => ['Jungle', 'Mage', 'Female']
+        ],
+        11 => [
+            "description" => "Sett is a powerful and imposing fighter, reigning as the undisputed king of the streets. He uses his incredible strength and resilience to dominate his foes, crushing anyone who dares to challenge him.",
+            "tags" => ['Toplane', 'Fighter', 'Male']
+        ],
+        12 => [
+            "description" => "Fiora is a duelist of unmatched skill, seeking to prove herself as the greatest swordswoman in all of Valoran. She relies on speed and precision to outmaneuver her opponents, striking them down with lethal accuracy.",
+            "tags" => ['Toplane', 'Fighter', 'Female']
         ]
     ];
 
     return $tags[$id];
 }
+
