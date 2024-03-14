@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    font-family: Arial;
+}
+
+body {
+    background-color: #c9c9ff;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #60609f;
+    padding: 20px;
+    border-bottom: solid #ffd31f 5px;
+    color: #ffe771;
+}
