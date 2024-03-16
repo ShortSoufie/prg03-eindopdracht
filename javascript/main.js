@@ -1,13 +1,12 @@
 window.addEventListener('load', init);
 
 // Globals
-const webservice = 'http://localhost/prg03-eindopdracht/webservice/';
+const webservice = 'webservice/data.php';
 let gallery;
 let championData = {};
 
 function init() {
     gallery = document.getElementById('league-gallery')
-    gallery.addEventListener('click', clickHandler)
 
     ajaxRequest(webservice, createLeagueCard);
 }
@@ -62,20 +61,12 @@ function fillChampionCard(champion){
 
     let championId = champion.id;
     btnBio.addEventListener('click', function() {
-        ajaxRequest(`${webservice}?id=${championId}`, showChampionBio)
+        ajaxRequest(`webservice/data.php?id=${championId}`, showChampionBio)
     });
 
     // Store Champion globally
     championData[champion.id] = champion;
-}
 
-function clickHandler(e) {
-    let clickedChampion = e.target
-
-    if (clickedChampion.classList.contains('champion-bioButton')) {
-        const championID = clickedChampion.closest('.champion-card').dataset.name
-        ajaxRequest(`${webservice}?id=${championID}`, showChampionBio)
-    }
 }
 
 function showChampionBio(data) {
