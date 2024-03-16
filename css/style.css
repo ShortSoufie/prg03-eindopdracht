@@ -25,6 +25,7 @@ nav {
     gap: 2vw;
     margin-left: 20px;
     margin-bottom: 20px;
+    width: 65%;
 }
 
 .champion-card {
