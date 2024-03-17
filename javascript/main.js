@@ -40,7 +40,7 @@ function createLeagueCard(data) {
 }
 
 function fillChampionCard(champion){
-    const championCard = document.querySelector(`.champion-card[data-name='${champion.id}']`); // Get the id for "Zoe" / 1
+    const championCard = document.querySelector(`.champion-card[data-name='${champion.id}']`); // Get the id for "Zoe" = 1
 
     // Create HTML Elements for the specific Champion with info from Champion
     const h2 = document.createElement('h2');
@@ -88,13 +88,17 @@ function fillChampionCard(champion){
 
     btnFav.addEventListener('click', function() {
         toggleFavorite(championId);
+
+        const clickedButton = event.target;
+        console.log(clickedButton)
+
         let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
         let isFavorite = favorites.includes(championId);
 
         if (isFavorite) {
-            btnFav.textContent = 'Remove from favorites';
+            clickedButton.textContent = 'Remove from favorites';
         } else {
-            btnFav.textContent = 'Add to favorites';
+            clickedButton.textContent = 'Add to favorites';
         }
     });
 }
