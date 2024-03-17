@@ -81,26 +81,27 @@ function fillChampionCard(champion){
     championData[champion.id] = champion; // Add champion to championData, so we have it locally
 
     // Event listeners for the butons
-    btnBio.addEventListener('click', function() {
-        // Fetch description and tags for specific champ with ID
-        ajaxRequest(`webservice/data.php?id=${championId}`, showChampionBio)
-    });
+    btnBio.addEventListener('click', handleBioButtonClick);
 
     btnFav.addEventListener('click', function() {
         toggleFavorite(championId);
-
-        const clickedButton = event.target;
-        console.log(clickedButton)
-
         let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
         let isFavorite = favorites.includes(championId);
 
         if (isFavorite) {
-            clickedButton.textContent = 'Remove from favorites';
+            btnFav.textContent = 'Remove from favorites';
         } else {
-            clickedButton.textContent = 'Add to favorites';
+            btnFav.textContent = 'Add to favorites';
         }
     });
+}
+
+function handleBioButtonClick(event) {
+    const clickedButton = event.target;
+    const championId = clickedButton.dataset.id;
+
+    // Fetch description and tags for specific champ with ID
+    ajaxRequest(`webservice/data.php?id=${championId}`, showChampionBio)
 }
 
 function showChampionBio(data) {
