@@ -17,6 +17,10 @@ nav {
     margin-bottom: 20px;
 }
 
+.container {
+    display: flex;
+}
+
 #league-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -26,6 +30,47 @@ nav {
     margin-left: 20px;
     margin-bottom: 20px;
     width: 65%;
+}
+
+#champion-info {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+    width: 35%;
+    height: 150px;
+    margin-right: 20px;
+    gap: 10px;
+
+    position: fixed;
+    top: 93px;
+    right: 20px;
+
+    color: white;
+    border: 3px solid #269c7d;
+    border-radius: 5px;
+    background-color: #3f5873;
+}
+
+#favorite-list {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 35%;
+    height: 150px;
+    margin-right: 20px;
+    gap: 10px;
+
+    position: fixed;
+    top: 330px;
+    right: 20px;
+
+    color: white;
+    border: 3px solid #269c7d;
+    border-radius: 5px;
+    background-color: #3f5873;
 }
 
 .champion-card {
@@ -42,7 +87,7 @@ nav {
 }
 
 .champion-image {
-    height: 350px;
+    height: 17rem;
     border: 2px solid #269c7d;
     border-radius: 5px;
 }
@@ -64,5 +109,4 @@ nav {
     background-color: #b0ffe3;
     cursor: pointer;
     transition: ease-in 0.2s;
-
 }
